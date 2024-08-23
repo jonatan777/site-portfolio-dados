@@ -88,4 +88,4 @@ def mostrar():
             st.write("\n")
         st.markdown("<p class='introducao'>Identificação de oportunidades de negócios:</p> <p class='lista'> O aprendizado de máquina pode ajudar a identificar oportunidades de negócios que não foram exploradas anteriormente.</p>", unsafe_allow_html=True)
         st.button("Menos", type="primary")
-          
+#mostrar()          

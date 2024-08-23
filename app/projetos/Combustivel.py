@@ -1,26 +1,14 @@
 import streamlit as st
 import pandas as pd
-# import numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 def mostrar():
     # Configuração da página (deve ser a primeira chamada Streamlit)
    # st.set_page_config(layout="wide", page_title="Dashboard de Combustíveis")
+    st.markdown("<div id='linkto_top'></div>", unsafe_allow_html=True)
 
-
-    st.markdown("""
-        <style>
-            .reportview-container {
-                margin-top: -2em;
-            }
-            #MainMenu {visibility: hidden;}
-            .stDeployButton {display:none;}
-            footer {visibility: hidden;}
-            #stDecoration {display:none;}
-            body {padding: 50px; margin:30px }   
-        </style>
-    """, unsafe_allow_html=True)
 
     # Carregar os dados
     # @st.cache_data
@@ -111,6 +99,7 @@ def mostrar():
 
     # Gráfico 5: Correlação entre os Preços dos Combustíveis
     st.subheader('Correlação entre os Preços dos Combustíveis')
+
     corr = data.iloc[:, 1:].corr()
     fig, ax = plt.subplots(figsize=(8, 2))
     im = ax.imshow(corr, cmap='coolwarm')
@@ -182,3 +171,5 @@ def mostrar():
     OBS:
         A Análise de Predição dessa Série Temporal não Passa de uma Estimativa dos Preços para o Futuro :+1:
     """)
+
+    st.markdown("<a href='#linkto_top'>Voltar ao topo</a>", unsafe_allow_html=True)   

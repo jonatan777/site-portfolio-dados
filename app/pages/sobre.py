@@ -42,10 +42,11 @@ def mostrar():
     """
     st.markdown(custom_css, unsafe_allow_html=True)
 
-    with st.container(border=True):
+    with st.container(border=False):
     
-        for _ in range(5):
-            st.write("\n")
+        for _ in range(2):
+           st.write("\n")
+
         st.markdown("<h1 class='titulo'>Jonatan Eduardo</h1>", unsafe_allow_html=True)
 
         st.markdown("<h2 class='subhead'>Analista de Dados</h2>", unsafe_allow_html=True)
@@ -85,8 +86,8 @@ def mostrar():
         st.markdown(
             """
             <p class='lista'> 
-              Graduação - Análise e Desenvolvimento de Sistemas - UNINTER ( 2016 - 2019 ) <br>
-              Pós - Ciências de Dados e IA - UNINTER ( 2024 - 2025 )
+              Graduação - Análise e Desenvolvimento de Sistemas - UNINTER (2016 - 2019) <br>
+              Pós - Ciências de Dados e IA - UNINTER (2024 - 2025)
             </p>
             """, unsafe_allow_html=True
         )

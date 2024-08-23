@@ -26,18 +26,23 @@ def mostrar():
         color: orange;
     }
     .subhead{
-      # font-size: 20px;
+        font-size: 20px;
         color: orange
     }
     .lista {
         font-size: 20px;
+         color: white;
     }
     .custom-container {
      padding:10px
      }
+     p{
+       color: white;
+     }
     </style>
     """
      st.markdown(custom_css, unsafe_allow_html=True)
+     st.markdown("<div id='linkto_top'></div>", unsafe_allow_html=True)
 
      with st.container(border=True):
         
@@ -328,3 +333,6 @@ def mostrar():
                     </p>
                     """, unsafe_allow_html=True)    
         st.markdown(":+1:")
+
+
+        st.markdown("<a href='#linkto_top'>Voltar ao topo</a>", unsafe_allow_html=True)
