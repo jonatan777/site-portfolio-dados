@@ -5,7 +5,5 @@ pandas
 seaborn
 matplotlib
 networkx
-
-
-
-
+google.generativeai
+dotenv

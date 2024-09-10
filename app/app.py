@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_option_menu import option_menu
 from pages import sobre, contato, inicio
-from projetos import entrada, heart_atack, alzheimer, Combustivel
+from projetos import entrada, heart_atack, alzheimer, Combustivel, ChatMitoCaverna
 
 # Configurações da página
 st.set_page_config(
@@ -71,7 +71,7 @@ def main():
         contato.mostrar()
     elif escolha == "Projetos":
         # Submenu para projetos
-        sub_escolha = st.selectbox("Escolha o Projeto!",(" ", "Probabilidade (Ataque Cardíaco)", "Estudo sobre Alzheimer", "Predição dos Combustiveis no Brasil"),)
+        sub_escolha = st.selectbox("Escolha o Projeto!",(" ", "Probabilidade (Ataque Cardíaco)", "Estudo sobre Alzheimer", "Predição dos Combustiveis no Brasil", "Chat Bot Mito da Caverna"),)
         st.write("PROJETO: ", sub_escolha)
 
         if sub_escolha == " ":
@@ -80,8 +80,10 @@ def main():
             heart_atack.mostrar()
         elif sub_escolha == "Estudo sobre Alzheimer":
             alzheimer.mostrar()
-        elif sub_escolha == "Predição dos Combustiveis no Brasil":
+        elif sub_escolha == "Predição dos Combustiveis no Brasil":  
             Combustivel.mostrar()
+        elif sub_escolha == "Chat Bot Mito da Caverna":
+            ChatMitoCaverna.mostrar()
 
 if __name__ == "__main__":
  main()

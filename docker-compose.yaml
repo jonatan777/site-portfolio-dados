@@ -3,7 +3,8 @@ version: "3.3"
 services:
     backend_combustivel:
       build: "./app"
-      container_name: dashboard-combustivel                           
+      container_name: dashboard-combustivel 
+      restart: always                          
       ports:
          - 8501:8501
       
